@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Comments Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<style>
+    table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+      }
+      
+      th {
+        background-color: #4287f5;
+        color: white;
+      }
+      
+      th,
+      td {
+        width: 150px;
+        text-align: center;
+        border: 1px solid black;
+        padding: 5px;
+      }
+      
+      h2 {
+        color: #4287f5;
+      }
+</style>
+<body>
+
+  <div class="table-users">
+
+   <table cellspacing="0">
+      <tr>
+         <th width="500">Comment</th>
+         <th>Commenter Name</th>
+      </tr>
+         {% for comment in co %}
+         {% for i in comment.items()%}
+      <tr>
+          <td width="300">{{i[0]}}</td>
+         <td>{{i[1]}}</td>
+        {% endfor %}
+       {% endfor %}
+   </table>
+</div>
+
+
+
+</body>
+
+</html>

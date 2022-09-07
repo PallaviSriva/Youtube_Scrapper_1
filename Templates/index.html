@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+
+
+{% block head %}
+<title>Scrapy World</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images.unsplash.com/photo-1514826786317-59744fe2a548?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  min-height: 130%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+.flip-card {
+    background-color: transparent;
+    width: 500px;
+    height: 500px;
+    perspective: 1000px;
+    float:left; //I just added this positioning.
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+flex-direction: row;
+flex-wrap: wrap;
+  }
+
+</style>
+{% endblock %}
+
+{% block body %}
+<body>
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Welcome to the Scrapy World</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Welcome to the Scrapy World</span><br>
+    
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Get Started</a></p>
+  </div> 
+</header>
+
+<!-- About Section -->
+<div class="w3-container w3-center w3-light-grey" style="padding:128px 16px" id="about">
+  <h3>ABOUT</h3>
+  <p class="w3-large">Choose a scraping option that suits your needs.</p>
+  <div class="container">
+    <div class="flip-card mt-5">
+        <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h1>Scrape any URL</h1> 
+          <img src="https://images.wallpaperscraft.com/image/single/code_text_colorful_140555_300x168.jpg" alt="Avatar" style="width:480px;height:350px;">
+        </div>
+        <div class="flip-card-back">
+            <h2>Hi, This option lets you scrape any URL from Youtube except Youtube Shorts. Please do not give URL of Youtube Shorts.</h2> 
+            <h1>Enjoy Scrapping!!</h1>
+        </div>
+        
+        </div>
+        <p><a target ="_blank", href="Any_URL" class="w3-button w3-green w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Proceed</a></p>
+    </div>
+    
+    <div class="flip-card mt-5">
+        <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <h1>Scrape 50 URL's</h1>
+            <img src="https://media.istockphoto.com/photos/encryption-your-data-binary-code-and-digital-lock-hacker-attack-and-picture-id1346223165?b=1&k=20&m=1346223165&s=170667a&w=0&h=q6W4oLmto2l8of4xCGXI2aYdSBbLbgC5mZs1sFUWgj8=" alt="Avatar" style="width:480px;height:350px;">
+        </div>
+        <div class="flip-card-back">
+            <h2>Hi, This option lets you scrape first 50 videos of particular youtuber. Proceeding with this option, you can select youtuber from the list.</h2> 
+            <h1>Enjoy Scrapping!!</h1>
+        </div>
+        </div>
+        <p><a target ="_blank", href="Channel_Wise" class="w3-button w3-green w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Proceed</a></p>
+    </div>
+</div>
+      
+    
+</div>
+
+  
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+ 
+
+{% endblock %}

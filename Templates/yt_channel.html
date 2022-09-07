@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+
+
+{% block head %}
+<title>Scrape Multiple URL's</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://media.istockphoto.com/photos/abstract-background-white-light-blue-purple-color-gradient-defocused-picture-id1303182525?b=1&k=20&m=1303182525&s=170667a&w=0&h=CcoMiovEh6X8KCTj6HZMVYLSxoBr_oUozr4jrZy4-_s=");
+  min-height: 130%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+
+
+.selectColor {
+  position: relative;
+  padding: 10px;
+  border: none;
+  border-right: 10px solid #fff;
+  outline: none;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+.w3-bar .w3-button {
+  padding: 16px;
+}
+.myDiv{
+	display:none;
+}  
+
+
+
+
+
+
+</style>
+{% endblock %}
+
+{% block body %}
+<body>
+<!-- Header with full-height image -->
+
+
+  <section>
+    <select id="myselection">
+      <option>Select Option</option>
+      <option value="One">Educational Channels</option>
+      <option value="Two">Vlogging Channels</option>
+    </select>
+    
+  
+    <div id="showOne" class="myDiv">
+      <p>Enter any name from below youtubers:</p>
+       <h5>Krish Naik</h5> 
+        <h5>Hitesh Choudhary</h5> 
+        <h5> Telusko </h5>
+        <h5> MySirG </h5>
+    </div>
+          <div id="showTwo" class="myDiv">
+            <p>Enter any name from below youtubers:</p>
+               <h5>Sourav Joshi Vlogs</h5> 
+                <h5>Flying Beast</h5> 
+                <h5> Mumbiker Nikhil </h5>
+            </div>
+        <div class="content">
+          <div class="form">
+            <form action="/review" method="POST">
+              <input type="text" name="content" id="content">
+                <input type="submit" value="Search" >
+            </form>
+        </div>
+      </div>
+      
+      
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>      
+
+<script>
+$(document).ready(function(){
+    $('#myselection').on('change', function(){
+    	var demovalue = $(this).val(); 
+        $("div.myDiv").hide();
+        $("#show"+demovalue).show();
+    });
+});
+</script> 
+
+
+{% endblock %}

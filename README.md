@@ -1,2 +1,2 @@
-# Youtube_Scrapper_1
-The scrapper helps to scrape information of youtube video like views, likes, comments etc
+# Youtube_Scrapper
+The project helps to scrape youtube pages to get information like viws, likes, comments etc.

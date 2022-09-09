@@ -3,10 +3,4 @@ flask
 flask_cors
 requests
 bs4
-urllib.request 
 selenium
-selenium.webdriver
-selenium.webdriver.common.by
-selenium.webdriver.common.keys
-selenium.webdriver.support.ui
-selenium.webdriver.support

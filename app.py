@@ -84,7 +84,7 @@ def index1():
                 return "Sorry!! Could not generate comments"
         res = {comment_yt[i]: commenter_name[i] for i in range(len(comment_yt))}
         co.append(res)
-        print(co[0:(len(co)-1)])
+        #print(co[0:(len(co)-1)])
         return render_template('results_com.html', co=co[0:(len(co))])
 
 
@@ -116,7 +116,7 @@ def index2():
         mydict = {"Video Link": url, "Title": title, "Views": views, "Likes": likes,
                           "Comment Count": comment_count}
         reviews1.append(mydict)
-        print(reviews1)
+        #print(reviews1)
         return render_template('results_any_url.html', reviews1=reviews1[0:(len(reviews1))])
 
 
@@ -150,7 +150,7 @@ def index3():
                 return "Sorry!! Could not generate comments"
         res = {comment_yt[i]: commenter_name[i] for i in range(len(comment_yt))}
         co.append(res)
-        print(co[0:(len(co)-1)])
+        #print(co[0:(len(co)-1)])
         return render_template('results_com.html', co=co[0:(len(co))])
 
 if __name__ == "__main__":

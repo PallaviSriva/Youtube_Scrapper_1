@@ -70,7 +70,7 @@ def index1():
 
             for item in range(2): #by increasing the highest range you can get more content
                 wait.until(EC.visibility_of_element_located((By.TAG_NAME, "body"))).send_keys(Keys.END)
-                time.sleep(3)
+                time.sleep(6)
             #print(wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#comment #author-text > span"))))
             try:
                 for comment in wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#comment #content-text"))):
@@ -136,7 +136,7 @@ def index3():
 
             for item in range(2): #by increasing the highest range you can get more content
                 wait.until(EC.visibility_of_element_located((By.TAG_NAME, "body"))).send_keys(Keys.END)
-                time.sleep(3)
+                time.sleep(6)
             #print(wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#comment #author-text > span"))))
             try:
                 for comment in wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "#comment #content-text"))):
